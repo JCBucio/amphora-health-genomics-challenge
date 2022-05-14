@@ -1,0 +1,7 @@
+# Input and output paths
+sample_data_path: '../data/input/'
+output_data_path: '../data/output/'
+
+# Specific files
+tsv_file: '../data/ancestry-1000genome.tsv'
+master_file: '../data/output/master.csv'
