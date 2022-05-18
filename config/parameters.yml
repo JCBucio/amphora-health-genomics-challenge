@@ -6,3 +6,9 @@ output_data_path: '../data/output/'
 tsv_file: '../data/ancestry-1000genome.tsv'
 master_file: '../data/output/master.csv'
 master_augmented: '../data/output/master_augmented.csv'
+master_augmented_2: '../data/output/master_augmented_2.csv'
+
+# Output models files
+afr_model: '../data/output/models/afr_model.pkl'
+eur_model: '../data/output/models/eur_model.pkl'
+sas_eas_model: '../data/output/models/sas_eas_model.pkl'
