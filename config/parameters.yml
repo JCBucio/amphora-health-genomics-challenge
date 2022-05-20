@@ -12,3 +12,8 @@ master_augmented_2: '../data/output/master_augmented_2.csv'
 afr_model: '../data/output/models/afr_model.pkl'
 eur_model: '../data/output/models/eur_model.pkl'
 sas_eas_model: '../data/output/models/sas_eas_model.pkl'
+
+# Csv's ready for training
+afr_df: '../data/output/afr_dataframe.csv'
+eur_df: '../data/output/eur_dataframe.csv'
+sas_eas_df: '../data/output/sas_eas_dataframe.csv'
