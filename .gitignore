@@ -2,7 +2,10 @@
 amphora-env/
 
 # Input and ouput data
-data/
+data/input/*
+data/output/*
+data/output/models/*
+data/ancestry-1000genome.tsv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
