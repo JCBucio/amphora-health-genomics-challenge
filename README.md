@@ -24,12 +24,6 @@ $ python3 -m pip install -r requirements.txt
 ```
 With this, we are ready to run the notebooks.
 
-If you want to run the notebooks from the command line, you can use the following command:
-```
-$ jupyter run src/main.ipynb
-```
-This will run all the notebooks in the project. This process will take a while, so please be patient.
-
 ### Files Structure
 
 This project is written in Jupyter Notebooks that follows an specific order to be run. Below is the tree of the structure of the notebooks:
