@@ -34,6 +34,7 @@ This will run all the notebooks in the project. This process will take a while, 
 
 This project is written in Jupyter Notebooks that follows an specific order to be run. Below is the tree of the structure of the notebooks:
 
+```
 src/
 ├── 0_preprocessing.ipynb
 ├── 1_data-augmentation.ipynb
@@ -42,6 +43,7 @@ src/
 ├── main.ipynb
 ├── tmp/
 └── utils.py
+```
 
 To make possible the processing of all the notebooks from a single file I am using the [papermill](https://papermill.readthedocs.io/en/latest/) package. Each notebook accomplish a different task from the ones defined above. They are separated as follows:
 
@@ -77,10 +79,16 @@ There is a config file that contains the parameters that will be used in the not
     - `eur_csv`: Path to the file containing the training dataset for European calculated genetic ancestry.
     - `sas_eas_csv`: Path to the file containing the training dataset for South Asian and East Asian calculated genetic ancestry.
 
+- **Plots filenames:**
+    - `afr_plot`: Path to the file containing the plot for the African model learning curve.
+    - `eur_plot`: Path to the file containing the plot for the European model learning curve.
+    - `sas_eas_plot`: Path to the file containing the plot for the Asian model learning curve.
+
 ### Data Structure
 
 Below is the data structure that follows the project, all the files stored in the `data/output` folder will be generated in the project.
 
+```
 data/
 ├── ancestry-1000genome.tsv
 ├── input/
@@ -92,36 +100,12 @@ data/
     ├── master_augmented_2.csv
     ├── master_augmented.csv
     ├── master.csv
-    └── models/
-        ├── afr_model.pkl
-        ├── eur_model.pkl
-        └── sas_eas_model.pkl
-    
-
-## Running the project
-Download the [zip file](https://github.com/JCBucio/amphora-health-genomics-challenge/archive/refs/heads/main.zip) or use `git clone` to clone the repository to a working directory (e.g., `/Users/jcbucio/amphora-health-genomics-challenge/`). All the notebooks will be run from this directory, and all new files will be generated here.
-
-The dependencies for this project can be easily installed via [pip](https://pypi.org/project/pip/) on the command line. I **highly** recommend using a virtual environment so that your dependencies does not conflict with other Python packages.
-This can be done with the following commands:
-
-First, we create a virtual environment located in our working directory:
-```
-$ python3 -m venv amphora-env
-```
-
-Now we activate the virtual environment:
-```
-$ source amphora-env/bin/activate
-```
-
-Then we install the dependencies:
-```
-$ python3 -m pip install -r requirements.txt
-```
-
-With this, we are ready to run the notebooks.
-If you want to run the notebooks from the command line, you can use the following command:
-```
-$ jupyter run src/main.ipynb
-```
-This will run all the notebooks in the project. This process will take a while, so please be patient.
+    ├── models/
+    │   ├── afr_model.pkl
+    │   ├── eur_model.pkl
+    │   └── sas_eas_model.pkl
+    └── plots/
+        ├── afr_plot.png
+        ├── eur_plot.png
+        └── sas_eas_plot.png
+```    

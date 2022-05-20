@@ -17,3 +17,8 @@ sas_eas_model: '../data/output/models/sas_eas_model.pkl'
 afr_df: '../data/output/afr_dataframe.csv'
 eur_df: '../data/output/eur_dataframe.csv'
 sas_eas_df: '../data/output/sas_eas_dataframe.csv'
+
+# Plots filenames
+afr_model_plot: '../data/output/plots/afr_plot.png'
+eur_model_plot: '../data/output/plots/eur_plot.png'
+sas_eas_model_plot: '../data/output/plots/sas_eas_plot.png'
