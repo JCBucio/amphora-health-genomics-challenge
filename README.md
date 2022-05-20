@@ -34,14 +34,14 @@ This will run all the notebooks in the project. This process will take a while, 
 
 This project is written in Jupyter Notebooks that follows an specific order to be run. Below is the tree of the structure of the notebooks:
 
-src
- ┣ tmp
- ┣ 0_preprocessing.ipynb
- ┣ 1_data-augmentation.ipynb
- ┣ 2_split-and-training.ipynb
- ┣ 3_evaluate-model.ipynb
- ┣ main.ipynb
- ┗ utils.py
+src/
+├── 0_preprocessing.ipynb
+├── 1_data-augmentation.ipynb
+├── 2_split-and-training.ipynb
+├── 3_evaluate-model.ipynb
+├── main.ipynb
+├── tmp/
+└── utils.py
 
 To make possible the processing of all the notebooks from a single file I am using the [papermill](https://papermill.readthedocs.io/en/latest/) package. Each notebook accomplish a different task from the ones defined above. They are separated as follows:
 
@@ -81,21 +81,22 @@ There is a config file that contains the parameters that will be used in the not
 
 Below is the data structure that follows the project, all the files stored in the `data/output` folder will be generated in the project.
 
-data
- ┣ input
- ┃ ┣ samples.csv
- ┣ output
- ┃ ┣ models
- ┃ ┃ ┣ afr_model.pkl
- ┃ ┃ ┣ eur_model.pkl
- ┃ ┃ ┗ sas_eas_model.pkl
- ┃ ┣ afr_dataframe.csv
- ┃ ┣ eur_dataframe.csv
- ┃ ┣ sas_eas_dataframe.csv
- ┃ ┣ master.csv
- ┃ ┣ master_augmented.csv
- ┃ ┗ master_augmented_2.csv
- ┗ ancestry-1000genome.tsv
+data/
+├── ancestry-1000genome.tsv
+├── input/
+│   └── n-samples.csv
+└── output/
+    ├── afr_dataframe.csv
+    ├── eur_dataframe.csv
+    ├── sas_eas_dataframe.csv
+    ├── master_augmented_2.csv
+    ├── master_augmented.csv
+    ├── master.csv
+    └── models/
+        ├── afr_model.pkl
+        ├── eur_model.pkl
+        └── sas_eas_model.pkl
+    
 
 ## Running the project
 Download the [zip file](https://github.com/JCBucio/amphora-health-genomics-challenge/archive/refs/heads/main.zip) or use `git clone` to clone the repository to a working directory (e.g., `/Users/jcbucio/amphora-health-genomics-challenge/`). All the notebooks will be run from this directory, and all new files will be generated here.
